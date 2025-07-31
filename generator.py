@@ -1,5 +1,6 @@
 import secrets
 import string
+import math
 
 def main():
     print("Lets create a strong password!")
@@ -28,18 +29,31 @@ def main():
         if(symbols_input == "y"):
             alphabet += symbols #append symbols if the user wants to
             password = ''.join(secrets.choice(alphabet) for i in range(length))
-            print(password)
+            entropy = math.log2(len(alphabet)) * length  #Calculating entropy
+            print("Password:", password)
+            print("Entropy: ", entropy)
+            print(f"Strength: {'Weak' if entropy < 60 else 'Good' if entropy < 80 else 'Strong'}")
         else:
            password = ''.join(secrets.choice(alphabet) for i in range(length))
-           print(password)
+           print("Password:", password)
+           entropy = math.log2(len(alphabet)) * length
+           print("Entropy: ", entropy)
+           print(f"Strength: {'Weak' if entropy < 60 else 'Good' if entropy < 80 else 'Strong'}")
     else:
         if(symbols_input == "y"):
             alphabet += symbols #append symbols if the user wants to
             password = ''.join(secrets.choice(alphabet) for i in range(length))
-            print(password)
+            print("Password:", password)
+
+            entropy = math.log2(len(alphabet)) * length
+            print("Entropy: ", entropy)
+            print(f"Strength: {'Weak' if entropy < 60 else 'Good' if entropy < 80 else 'Strong'}")
         else:
             password = ''.join(secrets.choice(alphabet) for i in range(length))
-            print(password)
+            print("Password:", password)
+            entropy = math.log2(len(alphabet)) * length 
+            print("Entropy: ", entropy)
+            print(f"Strength: {'Weak' if entropy < 60 else 'Good' if entropy < 80 else 'Strong'}")
 
 
 main()
