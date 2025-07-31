@@ -25,10 +25,6 @@ def main():
         except ValueError:
             print("Please enter a valid answer (y/n only).")
 
-    lowercase = string.ascii_lowercase
-
-    symbols_input = input("Include symbols? [y/n]:")
-
     while True:
         symbols_input = input("Include symbols? [y/n]:")
         try:
@@ -40,7 +36,7 @@ def main():
             print("Please enter a valid answer (y/n only).")
             
     symbols = '-_*&^%$#@!'
-
+    lowercase = string.ascii_lowercase
     alphabet = lowercase + string.digits #Characters that will be used (only lowercase at the beggining)
         
     if(uppercase_input == "y"):
