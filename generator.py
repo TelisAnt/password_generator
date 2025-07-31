@@ -15,10 +15,30 @@ def main():
         except ValueError:
             print("Please enter a valid number (digits only).")
 
-    uppercase_input = input("Include uppercase letters?[y/n]")
+    while True:
+        uppercase_input = input("Include uppercase letters?[y/n]")
+        try:
+            if (uppercase_input == "y") or (uppercase_input =="n"):
+                break
+            else:
+                print("Include uppercase letters?[y/n]. Try again.")
+        except ValueError:
+            print("Please enter a valid answer (y/n only).")
+
     lowercase = string.ascii_lowercase
 
     symbols_input = input("Include symbols? [y/n]:")
+
+    while True:
+        symbols_input = input("Include symbols? [y/n]:")
+        try:
+            if (symbols_input == "y") or (symbols_input =="n"):
+                break
+            else:
+                print("Include symbols?[y/n]. Try again.")
+        except ValueError:
+            print("Please enter a valid answer (y/n only).")
+            
     symbols = '-_*&^%$#@!'
 
     alphabet = lowercase + string.digits #Characters that will be used (only lowercase at the beggining)
