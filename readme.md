@@ -34,7 +34,6 @@ No external dependencies (uses built-in modules: secrets, string, math)
 
 📊 Entropy: 105.3 bits (Strong)
 
-📋 Password copied to clipboard!
 
 ## 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss proposed changes.
